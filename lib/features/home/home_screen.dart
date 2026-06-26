@@ -215,28 +215,68 @@ class HomeContent extends StatelessWidget {
             ),
 
             const SizedBox(height: 15),
-
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(18),
                 border: Border.all(color: Colors.grey.shade300),
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    const Color(0xFFD4AF37).withOpacity(0.1),
+                    const Color(0xFFC99800).withOpacity(0.05),
+                  ],
+                ),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    "Japji Sahib",
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        "Japji Sahib",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Icon(Icons.play_arrow, color: const Color(0xFFD4AF37)),
+                    ],
                   ),
                   const SizedBox(height: 6),
                   const Text("The Song of the Soul"),
                   const SizedBox(height: 18),
                   LinearProgressIndicator(
-                    value: .4,
+                    value: 0.4,
                     minHeight: 6,
                     borderRadius: BorderRadius.circular(20),
+                    backgroundColor: Colors.grey.shade200,
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      Color(0xFFD4AF37),
+                    ),
                   ),
+                  // const SizedBox(height: 8),
+                  // Row(
+                  //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  //   children: [
+                  //     Text(
+                  //       '40%',
+                  //       style: TextStyle(
+                  //         fontSize: 12,
+                  //         color: Colors.grey.shade600,
+                  //       ),
+                  //     ),
+                  //     Text(
+                  //       'Listen',
+                  //       style: TextStyle(
+                  //         fontSize: 12,
+                  //         color: Colors.grey.shade600,
+                  //       ),
+                  //     ),
+                  //   ],
+                  // ),
                 ],
               ),
             ),

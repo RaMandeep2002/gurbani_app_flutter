@@ -664,10 +664,12 @@ class _HukmnamaScreenState extends State<HukmnamaScreen> {
                   gurmukhi,
                   style: TextStyle(
                     fontSize: 20,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w900,
                     color: theme.colorScheme.onSurface,
                     height: 1.8,
                     letterSpacing: 0.5,
+                    // fontFamily: "RaagGurmukhi"
+                     fontFamily: "GurbaniAkharThick",
                   ),
                   textAlign: TextAlign.center,
                 ),
